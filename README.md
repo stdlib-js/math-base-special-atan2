@@ -24,14 +24,30 @@ limitations under the License.
 
 > Compute the angle in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-atan2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@esm/index.mjs';
+var atan2 = require( '@stdlib/math-base-special-atan2' );
 ```
 
 #### atan2( y, x )
@@ -71,14 +87,9 @@ v = atan2( 3.0, NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var atan2 = require( '@stdlib/math-base-special-atan2' );
 
 var y;
 var x;
@@ -89,10 +100,6 @@ for ( i = 0; i < 100; i++ ) {
     x = randu() * 100.0;
     console.log( 'y: %d, \t x: %d, \t atan2(y,x): %d', y.toFixed( 4 ), x.toFixed( 4 ), atan2( y, x ).toFixed( 4 ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -122,7 +129,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -177,7 +184,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/atan]: https://github.com/stdlib-js/math-base-special-atan/tree/esm
+[@stdlib/math/base/special/atan]: https://github.com/stdlib-js/math-base-special-atan
 
 <!-- </related-links> -->
 
