@@ -35,38 +35,30 @@ limitations under the License.
 
 > Compute the angle in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-atan2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-atan2 = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var atan2 = require( 'path/to/vendor/umd/math-base-special-atan2/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.atan2;
-})();
-</script>
+var atan2 = require( '@stdlib/math-base-special-atan2' );
 ```
 
 #### atan2( y, x )
@@ -106,14 +98,9 @@ v = atan2( 3.0, NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var atan2 = require( '@stdlib/math-base-special-atan2' );
 
 var y;
 var x;
@@ -124,11 +111,6 @@ for ( i = 0; i < 100; i++ ) {
     x = randu() * 100.0;
     console.log( 'y: %d, \t x: %d, \t atan2(y,x): %d', y.toFixed( 4 ), x.toFixed( 4 ), atan2( y, x ).toFixed( 4 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -143,7 +125,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/math-base/special/atan`][@stdlib/math/base/special/atan]</span><span class="delimiter">: </span><span class="description">compute the arctangent of a number.</span>
+-   <span class="package-name">[`@stdlib/math-base/special/atan`][@stdlib/math/base/special/atan]</span><span class="delimiter">: </span><span class="description">compute the arctangent of a double-precision floating-point number.</span>
 
 </section>
 
@@ -213,7 +195,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/atan]: https://github.com/stdlib-js/math-base-special-atan/tree/umd
+[@stdlib/math/base/special/atan]: https://github.com/stdlib-js/math-base-special-atan
 
 <!-- </related-links> -->
 
