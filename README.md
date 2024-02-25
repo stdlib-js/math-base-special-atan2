@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-atan2/tags). For example,
+
+```javascript
 import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@v0.2.1-esm/index.mjs';
 ```
 
@@ -89,7 +94,7 @@ v = atan2( 3.0, NaN );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@v0.2.1-esm/index.mjs';
+import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@esm/index.mjs';
 
 var y;
 var x;
