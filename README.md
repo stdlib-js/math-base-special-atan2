@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@esm/index.mjs';
+import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@v0.2.1-esm/index.mjs';
 ```
 
 #### atan2( y, x )
@@ -89,7 +89,7 @@ v = atan2( 3.0, NaN );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@esm/index.mjs';
+import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@v0.2.1-esm/index.mjs';
 
 var y;
 var x;
