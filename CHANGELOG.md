@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-04-20)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`165fd95`](https://github.com/stdlib-js/stdlib/commit/165fd95e0fc411b06b45766d53693156e6b6e463) - **test:** migrate `math/base/special/atan2` to ULP-based testing [(#11658)](https://github.com/stdlib-js/stdlib/pull/11658) _(by Mandeep2333)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Mandeep2333
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
