@@ -35,14 +35,48 @@ limitations under the License.
 
 > Compute the angle in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
 
+<section class="intro">
 
+The two-argument [arctangent][arctangent] function is defined as
+
+<!-- <equation class="equation" label="eq:atan2_function" align="center" raw="\operatorname{atan2}(y, x) = \begin{cases} \arctan\!\left(\tfrac{y}{x}\right) & \textrm{if}\ x > 0 \\ \arctan\!\left(\tfrac{y}{x}\right) + \pi & \textrm{if}\ x < 0,\ y \geq 0 \\ \arctan\!\left(\tfrac{y}{x}\right) - \pi & \textrm{if}\ x < 0,\ y < 0 \\ +\tfrac{\pi}{2} & \textrm{if}\ x = 0,\ y > 0 \\ -\tfrac{\pi}{2} & \textrm{if}\ x = 0,\ y < 0 \end{cases}" alt="Two-argument arctangent function"> -->
+
+```math
+\mathop{\mathrm{atan2}}(y, x) = \begin{cases} \arctan\!\left(\tfrac{y}{x}\right) & \textrm{if}\ x > 0 \\ \arctan\!\left(\tfrac{y}{x}\right) + \pi & \textrm{if}\ x < 0,\ y \geq 0 \\ \arctan\!\left(\tfrac{y}{x}\right) - \pi & \textrm{if}\ x < 0,\ y < 0 \\ +\tfrac{\pi}{2} & \textrm{if}\ x = 0,\ y > 0 \\ -\tfrac{\pi}{2} & \textrm{if}\ x = 0,\ y < 0 \end{cases}
+```
+
+<!-- </equation> -->
+
+</section>
+
+<!-- /.intro -->
+
+<section class="installation">
+
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-atan2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@deno/mod.js';
+var atan2 = require( '@stdlib/math-base-special-atan2' );
 ```
 
 #### atan2( y, x )
@@ -50,19 +84,19 @@ import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2
 Computes the angle in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
 
 ```javascript
-var v = atan2( 2.0, 2.0 ); // => atan(1.0)
+var v = atan2( 2.0, 2.0 );
 // returns ~0.785
 
-v = atan2( 6.0, 2.0 ); // => atan(3.0)
+v = atan2( 6.0, 2.0 );
 // returns ~1.249
 
-v = atan2( -1.0, -1.0 ); // => atan(1.0) - π
+v = atan2( -1.0, -1.0 );
 // returns ~-2.356
 
-v = atan2( 3.0, 0.0 ); // => π/2
+v = atan2( 3.0, 0.0 );
 // returns ~1.571
 
-v = atan2( -2.0, 0.0 ); // => -π/2
+v = atan2( -2.0, 0.0 );
 // returns ~-1.571
 
 v = atan2( 0.0, 0.0 );
@@ -83,9 +117,9 @@ v = atan2( 3.0, NaN );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import atan2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-atan2@deno/mod.js';
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var atan2 = require( '@stdlib/math-base-special-atan2' );
 
 var opts = {
     'dtype': 'float64'
@@ -102,7 +136,97 @@ logEachMap( 'atan2(%0.4f,%0.4f) = %0.4f', y, x, atan2 );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/atan2.h"
+```
+
+#### stdlib_base_atan2( y, x )
+
+Computes the angle in the plane (in radians) between the positive x-axis and the ray from `(0,0)` to the point `(x,y)`.
+
+```c
+double out = stdlib_base_atan2( 2.0, 2.0 );
+// returns ~0.785
+
+out = stdlib_base_atan2( 6.0, 2.0 );
+// returns ~1.249
+```
+
+The function accepts the following arguments:
+
+-   **y**: `[in] double` - `y` coordinate.
+-   **x**: `[in] double` - `x` coordinate.
+
+```c
+double stdlib_base_atan2( const double y, const double x );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/atan2.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void ) {
+    double y;
+    double x;
+    double v;
+    int i;
+
+    for ( i = 0; i < 100; i++ ) {
+        y = ( ( (double)rand() / (double)RAND_MAX ) * 100.0 );
+        x = ( ( (double)rand() / (double)RAND_MAX ) * 100.0 );
+        v = stdlib_base_atan2( y, x );
+        printf( "atan2(%lf, %lf) = %lf\n", y, x, v );
+    }
+    return 0;
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -127,7 +251,7 @@ logEachMap( 'atan2(%0.4f,%0.4f) = %0.4f', y, x, atan2 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -183,9 +307,11 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [esm-readme]: https://github.com/stdlib-js/math-base-special-atan2/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/math-base-special-atan2/blob/main/branches.md
 
+[arctangent]: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions
+
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/atan]: https://github.com/stdlib-js/math-base-special-atan/tree/deno
+[@stdlib/math/base/special/atan]: https://github.com/stdlib-js/math-base-special-atan
 
 <!-- </related-links> -->
 
